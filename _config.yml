@@ -1,0 +1,67 @@
+# Basic
+title: Liu Jun
+subtitle: Magician
+description: Progress everyday
+# 头像里面的标题
+avatarTitle: nicklj
+# 头像里面的描述
+avatarDesc: Computational Mechanics, Programming
+url: "http://nicklj.github.io"
+
+# Comment
+comment:
+    # disqus: leopard
+    duoshuo: nicklj 
+
+# Social
+social:
+    github: nicklj
+    # twitter: 
+    mail: nickliujun@gmail.com
+
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id:   
+
+# Google Analytics
+# 使用博客模板请去掉或者更换 id
+ga:
+    id: 
+    host: auto  
+
+
+# ----------------- 上面的信息修改成你自己的 ---------------------------
+#
+#  _post/   文章目录
+#  _drafts/ 未发布的文章目录
+#  目录结构具体参考文档：http://jekyll.com.cn/docs/structure/
+#
+# --------------- 下面的信息可以自行选择是否修改 ------------------------
+
+
+permalink: /:year/:month/:title/
+# Format
+markdown: kramdown
+highlighter: rouge
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: clear #背景Mask
+
+# The blog button should not be removed.
+blog_button:
+    title: Homepage
+
+# Navigation buttons in the front page.s
+nav:
+    - {title: Archive, description: archive, url: '/archive'}   
+    - {title: Tags, description: tags, url: '/tags'}      
+    - {title: About, description: about, url: '/about'}      
+    
+
+# Pagination
+plugins: [jekyll-paginate,jekyll-sitemap]
+paginate: 20
+paginate_path: "page/:num/"
+
+
