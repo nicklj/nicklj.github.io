@@ -7,32 +7,36 @@ tags: [Jekyll]
 
 The simplest way I found on the Internet to enable Latex in Jekyll.
 
-### Enable MathJax ###
+## Enable MathJax ##
 
-Add the follwing code to '_includes/head.html'
-~~~
+Add the follwing code to `_includes/head.html`
+```javascript
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
-      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-    //,
-    //displayAlign: "left",
-    //displayIndent: "2em"
-  });
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-~~~
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+```
 
-### Using Latex ###
+## Using LaTeX ##
 
+Just input equations with `\\[` instead of `$$` in LaTeX
+
+```
 \\[
-e^{ix} = \cos x + i \sin x $$
+e^{ix} = \cos x + i \sin x 
+\\]
+```
+which shows
+\\[
+e^{ix} = \cos x + i \sin x 
 \\]
 
-### Reference ###
-http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html
+## Reference ##
+[1. http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html](http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html)
+
+[2. https://stackoverflow.com/questions/26275645/how-to-support-latex-in-github-pages](https://stackoverflow.com/questions/26275645/how-to-support-latex-in-github-pages)

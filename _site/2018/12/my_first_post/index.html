@@ -159,7 +159,7 @@
       <time datetime="2018-12-24 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2018-12-24</time>
      
       <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      <span id="busuanzi_container_page_pv">　　阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+      <!-- <span id="busuanzi_container_page_pv">　　Viewer：<span id="busuanzi_value_page_pv"></span>Times</span> -->
     </p>
     </div>
   </header>
@@ -167,34 +167,37 @@
   <section class="post">
     <p>The simplest way I found on the Internet to enable Latex in Jekyll.</p>
 
-<h3 id="enable-mathjax">Enable MathJax</h3>
+<h2 id="enable-mathjax">Enable MathJax</h2>
 
-<p>Add the follwing code to ‘_includes/head.html’</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/x-mathjax-config"&gt;
-  MathJax.Hub.Config({
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
-      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-    //,
-    //displayAlign: "left",
-    //displayIndent: "2em"
-  });
-&lt;/script&gt;
-&lt;script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"&gt;&lt;/script&gt;
+<p>Add the follwing code to <code class="highlighter-rouge">_includes/head.html</code></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/x-mathjax-config"</span><span class="o">&gt;</span>
+    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+      <span class="na">tex2jax</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">skipTags</span><span class="p">:</span> <span class="p">[</span><span class="s1">'script'</span><span class="p">,</span> <span class="s1">'noscript'</span><span class="p">,</span> <span class="s1">'style'</span><span class="p">,</span> <span class="s1">'textarea'</span><span class="p">,</span> <span class="s1">'pre'</span><span class="p">],</span>
+        <span class="na">inlineMath</span><span class="p">:</span> <span class="p">[[</span><span class="s1">'$'</span><span class="p">,</span><span class="s1">'$'</span><span class="p">]]</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;&lt;</span><span class="sr">/script&gt;</span><span class="err"> 
+</span></code></pre></div></div>
+
+<h2 id="using-latex">Using LaTeX</h2>
+
+<p>Just input equations with <code class="highlighter-rouge">\\[</code> instead of <code class="highlighter-rouge">$$</code> in LaTeX</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\\[
+e^{ix} = \cos x + i \sin x 
+\\]
 </code></pre></div></div>
-
-<h3 id="using-latex">Using Latex</h3>
-
-<p>\[
-e^{ix} = \cos x + i \sin x $$
+<p>which shows
+\[
+e^{ix} = \cos x + i \sin x 
 \]</p>
 
-<h3 id="reference">Reference</h3>
-<p>http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html</p>
+<h2 id="reference">Reference</h2>
+<p><a href="http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html">1. http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html</a></p>
+
+<p><a href="https://stackoverflow.com/questions/26275645/how-to-support-latex-in-github-pages">2. https://stackoverflow.com/questions/26275645/how-to-support-latex-in-github-pages</a></p>
 
 
   </section>
