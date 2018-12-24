@@ -5,28 +5,48 @@
     <description>Progress everyday</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Dec 2018 10:13:36 +0800</pubDate>
-    <lastBuildDate>Mon, 24 Dec 2018 10:13:36 +0800</lastBuildDate>
+    <pubDate>Mon, 24 Dec 2018 10:28:14 +0800</pubDate>
+    <lastBuildDate>Mon, 24 Dec 2018 10:28:14 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
-        <title>The first post</title>
-        <description>&lt;p&gt;This is my first post on GitHub page.&lt;/p&gt;
+        <title>How to use Latex in Jekyll</title>
+        <description>&lt;p&gt;The simplest way I found on the Internet to enable Latex in Jekyll.&lt;/p&gt;
 
-&lt;p&gt;\[ \alpha + \beta = \sum_\sigma^{a=1} \]&lt;/p&gt;
+&lt;h3 id=&quot;enable-mathjax&quot;&gt;Enable MathJax&lt;/h3&gt;
 
-&lt;p&gt;[ \alpha + \beta = \sum_\sigma^{a=1} ]&lt;/p&gt;
+&lt;p&gt;Add the follwing code to ‘_includes/head.html’&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/x-mathjax-config&quot;&amp;gt;
+  MathJax.Hub.Config({
+    jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], [&quot;\\(&quot;, &quot;\\)&quot;] ],
+      displayMath: [ ['$$', '$$'], [&quot;\\[&quot;, &quot;\\]&quot;] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+    //,
+    //displayAlign: &quot;left&quot;,
+    //displayIndent: &quot;2em&quot;
+  });
+&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot; type=&quot;text/javascript&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\alpha + \beta = \sum_\sigma^{a=1}&lt;/script&gt;
+&lt;h3 id=&quot;using-latex&quot;&gt;Using Latex&lt;/h3&gt;
 
-&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;It is a test of my page.&lt;/p&gt;
+&lt;p&gt;\[
+e^{ix} = \cos x + i \sin x $$
+\]&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;p&gt;http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html&lt;/p&gt;
 </description>
         <pubDate>Mon, 24 Dec 2018 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2018/12/my_first_post/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/12/my_first_post/</guid>
         
-        <category>Diary</category>
+        <category>Jekyll</category>
         
         
       </item>

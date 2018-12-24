@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>The first post</title>
-  <meta name="description" content="This is my first post on GitHub page.">
+  <title>How to use Latex in Jekyll</title>
+  <meta name="description" content="The simplest way I found on the Internet to enable Latex in Jekyll.">
   <meta name="author" content="stidio">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The first post">
-  <meta name="twitter:description" content="This is my first post on GitHub page.">
+  <meta name="twitter:title" content="How to use Latex in Jekyll">
+  <meta name="twitter:description" content="The simplest way I found on the Internet to enable Latex in Jekyll.">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="The first post">
-  <meta property="og:description" content="This is my first post on GitHub page.">
+  <meta property="og:title" content="How to use Latex in Jekyll">
+  <meta property="og:description" content="The simplest way I found on the Internet to enable Latex in Jekyll.">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -61,7 +61,7 @@
       <div class="nav_container">
          <nav class="nav-menu-item" style = "float:right">
             <i class="nav-menu-item">
-              <a href="/#blog" title="" class="blog-button">  主页
+              <a href="/#blog" title="" class="blog-button">  Homepage
               </a>
             </i>
             
@@ -131,7 +131,7 @@
           <div>
             <nav class="cover-navigation cover-navigation--primary">
               <ul class="navigation">
-                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">主页</a></li>
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Homepage</a></li>
                 
                   <li class="navigation__item"><a href="/archive" title="archive">Archive</a></li>
                 
@@ -160,7 +160,7 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">The first post</h1>
+    <h1 class="post-title">How to use Latex in Jekyll</h1>
     <div class="post-meta">
       <time datetime="2018-12-24 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2018-12-24</time>
      
@@ -171,16 +171,36 @@
   </header>
 
   <section class="post">
-    <p>This is my first post on GitHub page.</p>
+    <p>The simplest way I found on the Internet to enable Latex in Jekyll.</p>
 
-<p>\[ \alpha + \beta = \sum_\sigma^{a=1} \]</p>
+<h3 id="enable-mathjax">Enable MathJax</h3>
 
-<p>[ \alpha + \beta = \sum_\sigma^{a=1} ]</p>
+<p>Add the follwing code to ‘_includes/head.html’</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/x-mathjax-config"&gt;
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+    //,
+    //displayAlign: "left",
+    //displayIndent: "2em"
+  });
+&lt;/script&gt;
+&lt;script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre></div></div>
 
-<script type="math/tex; mode=display">\alpha + \beta = \sum_\sigma^{a=1}</script>
+<h3 id="using-latex">Using Latex</h3>
 
-<h3 id="introduction">Introduction</h3>
-<p>It is a test of my page.</p>
+<p>\[
+e^{ix} = \cos x + i \sin x $$
+\]</p>
+
+<h3 id="reference">Reference</h3>
+<p>http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html</p>
 
 
   </section>
@@ -196,7 +216,7 @@
 <section class="post-comments">
 
   
-    <div class="ds-thread" data-thread-key="/2018/12/my_first_post/" data-title="The first post" data-url="http://localhost:4000/2018/12/my_first_post/"></div>
+    <div class="ds-thread" data-thread-key="/2018/12/my_first_post/" data-title="How to use Latex in Jekyll" data-url="http://localhost:4000/2018/12/my_first_post/"></div>
 
     <script type="text/javascript">
         var duoshuoQuery = {short_name:"nicklj"};

@@ -7,7 +7,7 @@ tags: [Jekyll]
 
 The simplest way I found on the Internet to enable Latex in Jekyll.
 
-## Enable MathJax ##
+### Enable MathJax ###
 
 Add the follwing code to '_includes/head.html'
 ~~~
@@ -28,9 +28,11 @@ Add the follwing code to '_includes/head.html'
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 ~~~
 
-## Using Latex ##
+### Using Latex ###
 
-$$ e^{ix} = \cos x + i \sin x $$
+\\[
+e^{ix} = \cos x + i \sin x $$
+\\]
 
-## Reference ##
+### Reference ###
 http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html
